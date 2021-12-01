@@ -2,3 +2,57 @@
 :global(.pv-break-word) {
   word-break: break-word;
 }
+
+/* vuetify override */
+:global(.theme--light.v-app-bar.v-toolbar.v-sheet) {
+  background: #000 !important;
+}
+:global(.theme--light.v-tabs-items){
+  background: #000!important;
+}
+:global(.theme--light.v-btn){
+  color: #9ccef9 !important;
+}
+:global(.theme--light.v-tabs > .v-tabs-bar){
+  background: #000 !important;
+  color: #9ccef9 !important;
+}
+
+:global(.theme--light.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active)){
+  color: #9ccef9!important;
+}
+:global(.theme--light.v-expansion-panels .v-expansion-panel){
+  background: #000 !important;
+  color:#9ccef9 !important;
+}
+:global(.theme--light.v-card){
+  background: #151a1f !important;
+  color:#9ccef9 !important;
+}
+:global(.theme--light.v-icon){
+   color:#9ccef9;
+}
+:global(.theme--light.v-expansion-panels .v-expansion-panel-header .v-expansion-panel-header__icon .v-icon){
+  color: #9ccef9 !important;
+}
+:global(.v-expansion-panels--accordion > .v-expansion-panel){
+  /* border-top: 1px solid #fff */
+}
+:global(.theme--light.v-card > .v-card__text){
+  color: #fff !important;
+}
+:global(.theme--light.v-input input){
+  color: #fff !important;
+}
+:global(.theme--light.v-label){
+  color: #fff !important;
+}
+:global(.theme--light.v-select .v-select__selections){
+  color: #fff !important;
+}
+:global(.theme--dark.v-icon){
+  color: #9ccef9 !important;
+}
+:global(.theme--dark.v-btn.v-btn--icon){
+  color: #9ccef9 !important;
+}
