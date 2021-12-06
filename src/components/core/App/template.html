@@ -4,7 +4,7 @@
 >
   <template v-slot:default="{ dragHover }">
     <v-app>
-      <v-navigation-drawer
+      <!-- <v-navigation-drawer
         v-model="controlsDrawer"
         :clipped="$vuetify.breakpoint.mdAndUp"
         :mobile-breakpoint="$vuetify.breakpoint.thresholds.sm"
@@ -15,13 +15,13 @@
         width="300"
       >
         <controls-drawer />
-      </v-navigation-drawer>
+      </v-navigation-drawer> -->
 
       <v-app-bar app clipped-left>
-        <v-app-bar-nav-icon
+        <!-- <v-app-bar-nav-icon
           :disabled="landingVisible"
           @click.native.stop="controlsDrawer = !controlsDrawer"
-        />
+        /> -->
         <v-tooltip
           bottom
           :disabled="smallScreen"

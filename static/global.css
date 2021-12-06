@@ -35,9 +35,6 @@
 :global(.theme--light.v-expansion-panels .v-expansion-panel-header .v-expansion-panel-header__icon .v-icon){
   color: #9ccef9 !important;
 }
-:global(.v-expansion-panels--accordion > .v-expansion-panel){
-  /* border-top: 1px solid #fff */
-}
 :global(.theme--light.v-card > .v-card__text){
   color: #fff !important;
 }
@@ -55,4 +52,7 @@
 }
 :global(.theme--dark.v-btn.v-btn--icon){
   color: #9ccef9 !important;
+}
+:global(.v-application .black--text){
+  color:#fff !important;
 }
