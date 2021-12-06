@@ -27,20 +27,20 @@
           :disabled="smallScreen"
         >
           <template v-slot:activator="{ on }">
-            <a
+            <!-- <a
               href="#"
               v-on="on"
               v-on:click.prevent="toggleLanding"
-            >
+            > -->
               <svg-icon
                 :icon="`paraview-glance${smallScreen ? '-small' : ''}`"
                 height="40px"
                 style="margin-top: 6px"
               />
-            </a>
+            <!-- </a> -->
           </template>
-          <span v-if="landingVisible" key="if-landingVisible">Go to app</span>
-          <span v-else key="if-landingVisible">Back to landing page</span>
+          <!-- <span v-if="landingVisible" key="if-landingVisible">Go to app</span>
+          <span v-else key="if-landingVisible">Back to landing page</span> -->
         </v-tooltip>
         <v-spacer />
         <v-toolbar-items>
@@ -62,22 +62,22 @@
           :dense="smallScreen"
         >
           <template v-slot:default="{ state }">
-            <collapsible-toolbar-item
+            <!-- <collapsible-toolbar-item
               v-on:click="showFileUpload"
               :state="state"
             >
               <v-icon left>mdi-folder</v-icon>
               <span v-show="state !== 'dense'">Open</span>
-            </collapsible-toolbar-item>
+            </collapsible-toolbar-item> -->
             <collapsible-toolbar-item
               v-show="!landingVisible"
               v-on:click="saveState()"
               :state="state"
             >
               <v-icon left>mdi-cloud-download</v-icon>
-              <span v-show="state !== 'dense'">Save state</span>
+              <span v-show="state !== 'dense'">下载文件</span>
             </collapsible-toolbar-item>
-            <collapsible-toolbar-item
+            <!-- <collapsible-toolbar-item
               v-show="!landingVisible"
               v-on:click="screenshotsDrawer = true"
               :state="state"
@@ -86,7 +86,7 @@
               <span v-show="state !== 'dense'">
                 Screenshots ({{ screenshotCount }})
               </span>
-            </collapsible-toolbar-item>
+            </collapsible-toolbar-item> -->
             <collapsible-toolbar-item
               v-on:click="aboutDialog = true"
               :state="state"
