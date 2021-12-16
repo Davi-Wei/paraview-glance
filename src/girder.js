@@ -10,13 +10,13 @@ Vue.use(Girder);
 // environment variable is set at build-time
 const { girderRoute } = vtkURLExtract.extractURLParameters();
 
-const apiRoot = girderRoute || 'https://data.kitware.com/api/v1';
+const apiRoot = girderRoute || 'http://192.168.1.253:8681/dcmai/getcta3d';
 
 // Create the axios-based client to be used for all API requests
 const girderRest = new RestClient({
   apiRoot,
 });
-girderRest.fetchUser();
+// girderRest.fetchUser();
 
 // This is passed to our Vue instance; it will be available in all components
 const GirderProvider = {

@@ -54,7 +54,7 @@ export default {
       fileUploadDialog: false,
       autoloadDialog: false,
       autoloadLabel: '',
-      internalControlsDrawer: true,
+      internalControlsDrawer: false,
       screenshotsDrawer: false,
       screenshotCount: 0,
       errors: [],
@@ -100,7 +100,7 @@ export default {
     },
   },
   created() {
-    this.internalControlsDrawer = !this.smallScreen;
+    // this.internalControlsDrawer = !this.smallScreen;
   },
   mounted() {
     this.$root.$on('open_girder_panel', () => {

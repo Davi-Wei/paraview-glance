@@ -126,7 +126,6 @@ export function createViewer(container, proxyConfig = null) {
 
     processURLArgs() {
       const params = vtkURLExtract.extractURLParameters();
-
       Object.keys(params)
         .filter((key) => key.startsWith('setting.'))
         .forEach((key) => {
@@ -134,11 +133,14 @@ export function createViewer(container, proxyConfig = null) {
           settings.set(name, params[key]);
         });
 
-      const { name, url } = params;
+      const { name, url, studyinstanceuid, seriesinstanceuid } = params;
+
+      const api = `${url}?studyinstanceuid=${studyinstanceuid}&seriesinstanceuid=${seriesinstanceuid}`;
+
       if (name && url) {
         const names = typeof name === 'string' ? [name] : name;
-        const urls = typeof url === 'string' ? [url] : url;
-        app.$children[0].autoLoadRemotes('resources from url', urls, names);
+        // const urls = typeof url === 'string' ? [url] : url;
+        app.$children[0].autoLoadRemotes('resources from url', [api], names);
       }
     },
     // All components must have a unique name
