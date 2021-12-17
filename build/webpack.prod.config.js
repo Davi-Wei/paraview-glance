@@ -89,7 +89,7 @@ module.exports = merge(baseConfig, {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html',
+      filename: '../index.html',
       template: 'static/index.html',
       inject: false,
       templateParameters: htmlTemplateParameters({ useGA: false }),
